@@ -85,7 +85,6 @@ export default function ResponsiveDrawer(props: Props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        José Ángel Hdz Rda
                     </Typography>
                 </Toolbar>
             </AppBar>

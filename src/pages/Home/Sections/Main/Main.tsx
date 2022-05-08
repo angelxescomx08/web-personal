@@ -60,15 +60,16 @@ const ContenedorTypesCards = styled.div`
 `
 
 export const Main = () => {
+
     return (
         <MainSection>
             <ContenedorSaludo>
-                <Saludo>Hola soy</Saludo>
-                <Nombre>José Ángel Hdz Rda</Nombre>
-                <Descripcion>
+                <Saludo className="animate__animated animate__fadeInUp animate__faster">Hola soy</Saludo>
+                <Nombre className="animate__animated animate__fadeInUp animate__faster animate__delay-1s" >José Ángel Hdz Rda</Nombre>
+                <Descripcion className="animate__animated animate__fadeInUp animate__faster animate__delay-2s">
                     Soy un estudiante de ingeniería en sistemas computacionales del Instituto Politécnico Nacional,
                     de la Escuela Superior de Cómputo. Estoy cursando mi último semestre, soy un apasianado
-                    del desarrollo web y de las apliaciones móviles.
+                    del desarrollo web y de las aplicaciones móviles.
                 </Descripcion>
             </ContenedorSaludo>
             <ContenedorFoto>
