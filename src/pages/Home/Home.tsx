@@ -37,7 +37,7 @@ export default function ResponsiveDrawer(props: Props) {
         <div style={{
             display: 'flex',
             flexFlow: 'column wrap',
-            backgroundColor: '#374765',height:'100vh',
+            backgroundColor: '#202227',height:'100vh',
             alignItems:' center',
             overflow: 'hidden',
             justifyContent: 'space-between'
@@ -70,7 +70,7 @@ export default function ResponsiveDrawer(props: Props) {
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
-                    backgroundColor: '#374765',
+                    backgroundColor: '#202227',
                 }}
             >
                 <Toolbar>
@@ -93,7 +93,7 @@ export default function ResponsiveDrawer(props: Props) {
                 sx={{ 
                     width: { sm: drawerWidth }, 
                     flexShrink: { sm: 0 }, 
-                    backgroundColor: '#374765',
+                    backgroundColor: '#202227',
                 }}
                 aria-label="mailbox folders"
             >
