@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TypeCard } from "../../../../common/TypeCard/TypeCard";
 
 import FotoPerfil from '../../../../img/foto.webp';
 
@@ -17,7 +18,7 @@ const ContenedorSaludo = styled.article`
 
 const Saludo = styled.h3`
     margin: 0;
-    font-size: 14px;
+    font-size: 1.2rem;
     color: #1A857F;
     font-family: 'Nunito', sans-serif;
 `
@@ -25,41 +26,64 @@ const Saludo = styled.h3`
 const Nombre = styled.h1`
     margin: 0;
     color: #fff;
-    font-size: 26px;
+    font-size: 3rem;
     font-family: 'Roboto', sans-serif;
 `
 
 const Descripcion = styled.p`
     margin: 0;
     color: #e6e3e3;
-    font-size: 14px;
+    font-size: 1.2rem;
     max-width: 450px;
     text-align: justify;
     font-family: 'Nunito', sans-serif;
 `
 
 const ContenedorFoto = styled.div`
-`
-
-const Foto = styled.img`
-    width: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 20px;
+    background-color: #606165;
     border-radius: 5px;
 `
 
-export const Main = ()=>{
+const Foto = styled.img`
+    width: 250px;
+    border-radius: 5px;
+`
+
+const ContenedorTypesCards = styled.div`
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+`
+
+export const Main = () => {
     return (
         <MainSection>
             <ContenedorSaludo>
-        	    <Saludo>Hola soy</Saludo>
+                <Saludo>Hola soy</Saludo>
                 <Nombre>José Ángel Hdz Rda</Nombre>
                 <Descripcion>
-                    Soy un estudiante de ingeniería en sistemas computacionales del Instituto Politécnico Nacional, 
-                    de la Escuela Superior de Cómputo. Estoy cursando mi último semestre, soy un apasianado 
+                    Soy un estudiante de ingeniería en sistemas computacionales del Instituto Politécnico Nacional,
+                    de la Escuela Superior de Cómputo. Estoy cursando mi último semestre, soy un apasianado
                     del desarrollo web y de las apliaciones móviles.
                 </Descripcion>
             </ContenedorSaludo>
             <ContenedorFoto>
-                <Foto src={FotoPerfil} alt=""/>
+                <Foto src={FotoPerfil} alt="" />
+                <ContenedorTypesCards>
+                    <TypeCard 
+                        texto="You can be the greatest, You can be the best" 
+                        margenIzquierdo="30px"/>
+                    <TypeCard 
+                        texto="You can be the greatest, You can be the best" 
+                        margenIzquierdo="70px"/>
+                    <TypeCard 
+                        texto="You can be the greatest, You can be the best" 
+                        margenIzquierdo="50px"/>
+                </ContenedorTypesCards>
             </ContenedorFoto>
         </MainSection>
     )
