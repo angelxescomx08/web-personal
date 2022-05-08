@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-const MainSection = styled.section``
+import FotoPerfil from '../../../../img/foto.webp';
+
+const MainSection = styled.section`
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+`
 
 const ContenedorSaludo = styled.article`
     display: flex;
@@ -12,12 +19,14 @@ const Saludo = styled.h3`
     margin: 0;
     font-size: 14px;
     color: #1A857F;
+    font-family: 'Nunito', sans-serif;
 `
 
 const Nombre = styled.h1`
     margin: 0;
     color: #fff;
     font-size: 26px;
+    font-family: 'Roboto', sans-serif;
 `
 
 const Descripcion = styled.p`
@@ -26,6 +35,15 @@ const Descripcion = styled.p`
     font-size: 14px;
     max-width: 450px;
     text-align: justify;
+    font-family: 'Nunito', sans-serif;
+`
+
+const ContenedorFoto = styled.div`
+`
+
+const Foto = styled.img`
+    width: 200px;
+    border-radius: 5px;
 `
 
 export const Main = ()=>{
@@ -40,6 +58,9 @@ export const Main = ()=>{
                     del desarrollo web y de las apliaciones móviles.
                 </Descripcion>
             </ContenedorSaludo>
+            <ContenedorFoto>
+                <Foto src={FotoPerfil} alt=""/>
+            </ContenedorFoto>
         </MainSection>
     )
 }
