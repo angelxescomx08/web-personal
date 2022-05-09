@@ -8,6 +8,7 @@ const MainSection = styled.section`
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
+    padding: 10em 2em;
 `
 
 const ContenedorSaludo = styled.article`
