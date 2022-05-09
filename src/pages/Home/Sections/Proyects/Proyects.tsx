@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { useInView } from "react-cool-inview";
+
 import { IconCloud } from '../../../../common/IconCloud/IconCloud';
 import { ProyectCard } from '../../../../common/ProyectCard/ProyectCard';
 import { Title } from '../../../../common/Title/Title';
@@ -27,16 +29,20 @@ const ContenedorProyectos = styled.div`
     }
 `
 
-const arr = [1,2,3,4,5,6,7,8,9,10,11]
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 export const Proyects = () => {
+    const { observe, inView } = useInView({
+        unobserveOnEnter: true,
+        threshold: .6
+    });
     return (
-        <ProyectsSection>
+        <ProyectsSection ref={observe} className={inView? 'animate__animated animate__fadeIn animate__slow':'oculto'}>
             <Title>Proyectos</Title>
             <Contenedor>
                 <IconCloud />
                 <ContenedorProyectos>
-                    {arr.map(proyecto=><ProyectCard/>)}
+                    {arr.map(proyecto => <ProyectCard />)}
                 </ContenedorProyectos>
             </Contenedor>
         </ProyectsSection>

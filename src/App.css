@@ -4,3 +4,8 @@
 :root {
     --animate-delay: .01s;
 }
+
+/*Estilos de visibilidad*/
+.oculto{
+    visibility: hidden;
+}
