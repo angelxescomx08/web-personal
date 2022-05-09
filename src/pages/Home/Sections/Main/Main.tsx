@@ -47,6 +47,7 @@ const ContenedorFoto = styled.div`
     padding: 20px;
     background-color: #606165;
     border-radius: 5px;
+    box-shadow: 5px 5px 0.5em #060606;
 `
 
 const Foto = styled.img`

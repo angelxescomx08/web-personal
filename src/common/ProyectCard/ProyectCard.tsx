@@ -14,7 +14,9 @@ const Imagen = styled.img`
 export const ProyectCard = () =>{
     return(
         <Proyecto>
-            <Imagen src="https://www.workmeter.com/wp-content/uploads/2015/09/gestion-de-proyectos-que-es-scaled.jpg" alt=""/>
+            <Imagen 
+                src="https://www.workmeter.com/wp-content/uploads/2015/09/gestion-de-proyectos-que-es-scaled.jpg" 
+                alt=""/>
         </Proyecto>
     )
 }

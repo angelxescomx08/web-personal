@@ -22,6 +22,7 @@ export const IconCloud = () => {
             {
                 proyectos.map((proyecto)=><ContenedorIcon key={proyecto} href="#!">
                     <Icon 
+                        onClick={()=>{console.log('sdas')}}
                         height="200"
                         width="200" 
                         src={proyecto} />
