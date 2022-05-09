@@ -15,6 +15,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Main } from './Sections/Main/Main';
+import { Proyects } from './Sections/Proyects/Proyects';
 
 const drawerWidth = 55;
 
@@ -136,7 +137,7 @@ export default function ResponsiveDrawer(props: Props) {
             >
                 <Toolbar />
                 <Main />
-                
+                <Proyects/>
             </Box>
         </Box>
     );
