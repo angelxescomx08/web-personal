@@ -6,6 +6,7 @@ import { IconCloud } from '../../../../common/IconCloud/IconCloud';
 import { ProyectCard } from '../../../../common/ProyectCard/ProyectCard';
 import { Title } from '../../../../common/Title/Title';
 import { proyectos } from '../../../../js/proyectos';
+import { tecnologias } from '../../../../js/tecnologias';
 
 const ProyectsSection = styled.section`
     padding: 10em 2em;
@@ -82,9 +83,9 @@ export const Proyects = () => {
             <Contenedor className={animacionClase}>
                 <IconCloud setFiltro={setFiltro}/>
                 <ContenedorEstadisticas>
-                    <Estadistica>Proyectos: <Valor>30</Valor></Estadistica>
+                    <Estadistica>Proyectos: <Valor>{proyectos.length}</Valor></Estadistica>
                     <Estadistica>Lenguajes usados: <Valor>15</Valor></Estadistica>
-                    <Estadistica>Framework/Bibliotecas usadas: <Valor>55</Valor></Estadistica>
+                    <Estadistica>Framework/Bibliotecas usadas: <Valor>{tecnologias.length}</Valor></Estadistica>
                     <Estadistica>Desplegados en internet: <Valor>8</Valor></Estadistica>
                     <hr/>
                     <Estadistica>Tecnología: <Valor>{filtro}</Valor></Estadistica>
