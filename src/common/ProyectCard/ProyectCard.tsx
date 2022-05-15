@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 const Proyecto = styled.article`
-    width: 33.33%;
+    width: 25%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    @media (max-width: 600px) {
+        width: 50%;
+    }
 `
 
 const Imagen = styled.img`
@@ -11,11 +16,11 @@ const Imagen = styled.img`
     object-fit: cover;
 `
 
-export const ProyectCard = () =>{
+export const ProyectCard = ({img}) =>{
     return(
         <Proyecto>
             <Imagen 
-                src="https://www.workmeter.com/wp-content/uploads/2015/09/gestion-de-proyectos-que-es-scaled.jpg" 
+                src={img} 
                 alt=""/>
         </Proyecto>
     )

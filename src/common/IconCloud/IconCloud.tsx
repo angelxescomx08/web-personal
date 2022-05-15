@@ -1,32 +1,31 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Cloud } from 'react-icon-cloud'
-import { proyectos } from '../../js/proyectos';
+import { Cloud, renderSimpleIcon } from 'react-icon-cloud'
+import { tecnologias } from '../../js/tecnologias';
 
 const ContenedorCloud = styled(Cloud)`
 `
 
-const ContenedorIcon = styled.a`
-`
-
-const Icon = styled.img`
-`
-
-export const IconCloud = () => {
+export const IconCloud = ({setFiltro}) => {
     return (
         <ContenedorCloud options={{
-            wheelZoom:false,
+            wheelZoom: false,
             minSpeed: 5,
-            initial: [.2,0]
-            }}>
+            initial: [.2, 0]
+        }}>
             {
-                proyectos.map((proyecto)=><ContenedorIcon key={proyecto} href="#!">
-                    <Icon 
-                        onClick={()=>{console.log('sdas')}}
-                        height="200"
-                        width="200" 
-                        src={proyecto} />
-                </ContenedorIcon>)
+                tecnologias.map(({icon,nombre}) => {
+                    return renderSimpleIcon({
+                        icon,
+                        size: 150,
+                        aProps: {
+                            onClick: (e: any) => {
+                                e.preventDefault();
+                                setFiltro(nombre);
+                            }
+                        }
+                    })
+                })
             }
         </ContenedorCloud>
     )

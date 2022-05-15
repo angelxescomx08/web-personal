@@ -9,6 +9,9 @@ const MainSection = styled.section`
     align-items: center;
     justify-content: space-evenly;
     padding: 10em 2em;
+    @media (max-width: 600px) {
+        padding: 2em .2em;
+    }
 `
 
 const ContenedorSaludo = styled.article`
