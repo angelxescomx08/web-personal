@@ -1,4 +1,4 @@
-import {  useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useInView } from "react-cool-inview";
 
@@ -59,16 +59,27 @@ const Valor = styled.span`
 `
 
 export const Proyects = () => {
-    const [filtro,setFiltro] = useState('Todos');
+    const [filtro,setFiltro] = useState('Javascript');
+    const [animacionClase,setAnimacionClase] = useState('animate__animated animate__fadeIn')
     const { observe, inView } = useInView({
         unobserveOnEnter: true,
         threshold: .2
     });
 
+    useEffect(()=>{
+        setAnimacionClase('');
+        const timer = setTimeout(()=>{
+            setAnimacionClase('animate__animated animate__fadeIn');
+        },10)
+        return ()=>{
+            clearTimeout(timer);
+        } 
+    },[filtro])
+
     return (
         <ProyectsSection ref={observe} className={inView ? 'animate__animated animate__fadeIn animate__slow' : 'oculto'}>
             <Title>Proyectos</Title>
-            <Contenedor>
+            <Contenedor className={animacionClase}>
                 <IconCloud setFiltro={setFiltro}/>
                 <ContenedorEstadisticas>
                     <Estadistica>Proyectos: <Valor>30</Valor></Estadistica>
@@ -80,7 +91,7 @@ export const Proyects = () => {
                     <Estadistica>Proyectos encontrados: <Valor>8</Valor></Estadistica>
                 </ContenedorEstadisticas>
             </Contenedor>
-            <ContenedorProyectos>
+            <ContenedorProyectos className={animacionClase}>
                 {proyectos.map(proyecto =>{
                     if(proyecto.tecnologias.includes(filtro)){
                         return <ProyectCard 
